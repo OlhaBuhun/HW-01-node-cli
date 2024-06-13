@@ -19,8 +19,8 @@ async function invokeAction({ action, id, name, email, phone }) {
 			return console.table(allContacts);
 
 		case "get":
-			const getById = await contactService.getContactById(id);
-			return console.log(getById);
+			const oneContact = await contactService.getContactById(id);
+			return console.log(oneContact);
 
 		case "add":
 			const newContact = await contactService.addContact({ name, email, phone });
